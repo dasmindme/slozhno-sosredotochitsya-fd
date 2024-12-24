@@ -17,6 +17,8 @@
   inline-size: 375px;
 }
 
+/* Шапка сделана через грид из 1 колонки и 3 строк */
+
 .header {
   position: relative;
   display: grid;
@@ -27,6 +29,8 @@
   inline-size: 100%;
 }
 
+/* Через абсолютное позиционирование добавила декаративный элемент */
+
 .header__rec {
   position: absolute;
   top: 10px;
@@ -36,6 +40,8 @@
   line-height: 25px;
   text-transform: uppercase;
 }
+
+/* Через псевдоэлемент и абсолютное позиционирование добавила декаративный элемент точку */
 
 .header__rec::after {
   content: '';
@@ -49,6 +55,8 @@
   box-shadow: 0px 0px 4px 2px var(--accept-color, #FF0070);
   background: var(--accept-color, #FF0070);
 }
+
+/* С помощью псевдоэлементов добавила уголки */
 
 .decorated-zone::before {
   content: '';
@@ -72,6 +80,8 @@
   inline-size: 25px;
 }
 
+/* Меню тем расположила через свойства гридов */
+
 .header__theme-menu {
   grid-column: span 1;
   grid-row: 1 /2;
@@ -82,6 +92,8 @@
 
 }
 
+/* Для списка использован флекс контейнер */
+
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
@@ -90,6 +102,8 @@
   gap: 12px;
   list-style: none;
 }
+
+/* Стилизация кнопок */
 
 .header__theme-menu-button {
   border: 0;
@@ -106,6 +120,8 @@
   min-block-size: 24px;
 }
 
+/* Различные состояния кнопок */
+
 .header__theme-menu-button:hover {
   outline: var(--accent-color, #FF0070) 1px solid;
 }
@@ -121,6 +137,7 @@
   pointer-events: none;
 }
 
+/* У загаловка размер задан через clamp, также есть тень */
 
 .header__title {
   display: block;
@@ -132,9 +149,10 @@
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
+/* Через свойства гридов задано положение описания */
+
 .header__description {
   grid-column: span 1;
-  justify-self: center;
   align-self: center;
   margin-inline: var(--margin-inline-s, 10px);
   margin-block-end: 27px;
@@ -142,7 +160,10 @@
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
   background-color: var(--accent-color, #FF0070);
+  inline-size: 355px;
 }
+
+/* Цвет и размер шрифта для контета на странице */
 
 .content {
   padding-block-start: 40px;
@@ -152,30 +173,41 @@
   /*background-color: var(--color-violet, #000028);*/
 }
 
+/* Для всех секций задан один отступ */
+
 .section {
   inline-size: 100%;
+  margin-inline: var(--margin-inline-s, 10px);
 }
 
+/* Стили заголовка секций */
+
 .section__title {
-  padding-inline: var(--padding-inline-s, 10px);
+  inline-size: 355px;
   padding-block-end: 20px;
   color: var(--accent-color, #FF0070);
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
 }
 
+/* Отступ для списка */
+
 .list {
   padding-block-end: 31px;
 }
 
+/* Стили и отступы для заголовка карточек */
+
 .article__title {
-  margin-inline: var(--margin-inline-s, 10px);
+  inline-size: 355px;
   margin-block-end: 10px;
   color: var(--color-description-2, #000028);
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
   background-color: var(--accent-color, #FF0070);
 }
+
+/* Стили и отступы для заголовка с нежирным шрифтом карточек */
 
 .article__title.title-decor {
   color: var(--color-description-2, #000028);
@@ -184,8 +216,10 @@
   background-color: var(--accent-color, #FF0070);
 }
 
+/* Стили и отступы для заголовка секции how */
+
 .description__title.title-decor {
-  margin-inline: var(--margin-inline-s, 10px);
+  inline-size: 355px;
   margin-block-start: 20px;
   margin-block-end: 10px;
   color: var(--color-description-2, #000028);
@@ -194,20 +228,28 @@
   background-color: var(--accent-color, #FF0070);
 }
 
+/* Размеры и отступы для описания карточек */
+
 .article__description {
-  padding-inline: var(--padding-inline-s, 10px);
+  inline-size: 355px;
   padding-block-end: 20px;
   line-height: 130%;
 }
+
+/* Сбросила отсупы для описания карточек в секции how */
 
 .article__description.description-how {
   padding-block: 0;
 }
 
+/* Стили для ссылки */
+
 .link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
+
+/* Стили для ссылки в различных состояниях */
 
 .link:hover {
   border-block-end: 1px solid var(--color-description-1, #F1B2CE);
@@ -217,16 +259,21 @@
   outline: var(--color-description-1, #F1B2CE) 1px solid;
 }
 
+/* Отсутпы для секции галерея */
+
 .section-gallery {
   padding-block-start: 20px;
   padding-block-end: 32px;
 }
 
+/* Размеры и отступ для картинки */
+
 .image {
-  padding-inline: var(--padding-inline-s, 10px);
+  inline-size: 355px;
   padding-block-end: 5px;
-  inline-size: 375px;
 }
+
+/* Подвал повторяет шапку */
 
 .footer {
   position: relative;
@@ -234,6 +281,8 @@
   grid-template-columns: 1fr;
   min-block-size: 668px;
 }
+
+/* Заголовок в подвале повторяет свойства заголовка в шапке */
 
 .footer__title {
   justify-self: center;
@@ -245,6 +294,8 @@
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
+/* Медиазапрос для экранов планшета */
+
 @media (width > 768px) {
   .page {
     inline-size: 768px;
@@ -252,7 +303,6 @@
 
   .header {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content 1fr;
     gap: 0;
     min-block-size: 1024px;
   }
@@ -300,30 +350,34 @@
 
   .section {
     display: grid;
-    padding-block-end: 61px;
+    padding-block-end: 60px;
     inline-size: 100%;
+    margin-inline: 20px;
   }
 
   .section-why {
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
+    gap: 20px;
   }
 
   .section-what {
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
   }
 
   .section-how {
-    grid-template-columns: 256px 1fr;
+    grid-template-columns: 236px 1fr;
     grid-template-rows: 1fr;
+    gap: 20px;
   }
 
   .section__title {
+    inline-size: 236px;
     display: block;
     padding-inline: 0;
-    padding-inline-start: 20px;
     word-wrap: break-word;
+    padding-block: 0;
   }
 
   .section__title.title-decor {
@@ -335,15 +389,23 @@
   }
 
   .list {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2;
     padding-block-end: 0;
+    inline-size: 472px;
+  }
+
+  .list.list-what {
+    inline-size: 728px;
+    grid-column: span 2;
+    grid-row: 2;
+  }
+
+  .list.list-how {
+    display: grid;
   }
 
   .section-gallery {
-    padding-inline: 17px;
-    inline-size: 100%;
+    inline-size: 728px;
+    padding-block-start: 15px;
   }
 
   .gallery {
@@ -353,16 +415,11 @@
         "tape books ice-cream"
         "tape street street";
     gap: 20px;
-    padding-block-start: 20px;
-  }
-
-  .list-what {
-    grid-column: span 2;
-    grid-row: 2;
+    padding-block-start: 12px;
   }
 
   .article__description {
-    padding-inline-start: 20px;
+    padding-inline: 0;
     padding-block-end: 24px;
     font-weight: var(--font-weight-s, 400);
     font-size: var(--font-size, 18px);
@@ -372,19 +429,21 @@
     inline-size: 100%;
   }
 
+
   .article__description.description-how {
     padding-block-end: 4px;
   }
 
   .article__title {
-    margin-inline: 20px;
+    inline-size: 100%;
+    margin-inline: 0;
     block-size: 23px;
   }
 
   .description__title.title-decor {
-    margin-inline: 20px;
-    margin-block-start: 11px;
-    margin-block-end: 13px;
+    margin-inline: 0;
+    margin-block: 15px;
+    inline-size: 472px;
   }
 
   .image {
@@ -499,6 +558,7 @@
     margin-inline: 0;
     margin-inline-end: 18px;
     margin-block-start: var( --margin-block-s, 10px);
+    inline-size: 491px;
   }
 
   .content {
@@ -507,28 +567,32 @@
 
   .section {
     display: grid;
-    padding-inline: 20px;
-    padding-block-end: 62px;
+    padding-block-end: 63px;
     inline-size: 100%;
   }
 
   .section-why {
     grid-template-columns: 315px 1fr;
     grid-template-rows: 1fr;
-    gap: 13px;
+    gap: 20px;
+  }
+
+  .section-what {
+    grid-template-columns: 315px 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
   }
 
   .section-how {
     grid-template-columns: 315px 1fr;
     grid-template-rows: 1fr;
-    gap: 13px;
+    gap: 20px;
   }
 
   .section-gallery {
-    padding-inline: 17px;
-    padding-block-start: 5px;
-    padding-block-end: 58px;
-    inline-size: 100%;
+    padding-block-start: 20px;
+    padding-block-end: 55px;
+    inline-size: 984px;
   }
 
   .gallery {
@@ -547,6 +611,7 @@
     padding-block: 0;
     padding-block-end: 22px;
     word-wrap: break-word;
+    inline-size: 100%;
   }
 
   .section__title.title-decor {
@@ -559,20 +624,19 @@
   }
 
   .list {
-    margin-inline: 7px;
     padding-block-end: 0;
+    inline-size: 649px;
   }
 
   .list.list-what {
     display: grid;
     grid-template-columns: repeat(3, 315px);
-    justify-content: center;
     gap: 20px;
   }
 
   .list.list-how {
     display: grid;
-    gap: 10px;
+    inline-size: 649px;
   }
 
   .list-item {
@@ -589,11 +653,11 @@
     line-height: var(--line-height, 23px);
     text-align: start;
     min-inline-size: 315px;
+    inline-size: 100%;
   }
 
   .article__description.description-how {
     padding-block: 0;
-    padding-block-end: 11px;
   }
 
   .article__title {
@@ -604,8 +668,9 @@
 
   .description__title.title-decor {
     margin-inline: 0;
-    margin-block-start: 0;
-    margin-block-end: 12px;
+    margin-block-start: 22px;
+    margin-block-end: 10px;
+    inline-size: 100%;
   }
 
   .image {
@@ -617,40 +682,30 @@
   }
 
   .image-sunset {
-    /*grid-column: span 2;
-    grid-row: 1;*/
     grid-area: sunset;
     inline-size: 650px;
     block-size: 260px;
   }
 
   .image-ice-cream {
-    /*grid-row: 1/2;
-    grid-column: 3;*/
     grid-area: ice-cream;
     block-size: 595px;
     inline-size: 314px;
   }
 
   .image-tape {
-    /*grid-column: 1;
-    grid-row: 2/3;*/
     grid-area: tape;
     inline-size: 315px;
     block-size: 768px;
   }
 
   .image-books {
-    /*grid-row: 2;
-    grid-column: 2;*/
     grid-area: books;
     inline-size: 315px;
     block-size: 315px;
   }
 
   .image-street {
-    /*grid-column: 2 / 3;
-    grid-row: 3;*/
     grid-area: street;
     inline-size: 649px;
     block-size: 433px;
