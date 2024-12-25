@@ -23,7 +23,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr; 
-  grid-template-rows:1fr min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   gap: 15px;
   min-block-size: 668px;
   inline-size: 100%;
@@ -170,7 +170,7 @@
   color: var(--color-description-1, #F1B2CE);
   font-size: var(--font-size, 18px);
   inline-size: 100%;
-  /*background-color: var(--color-violet, #000028);*/
+  background-color: var(--color-description-2,  #000028);
 }
 
 /* Для всех секций задан один отступ */
@@ -485,6 +485,7 @@
   }
 
   .footer {
+    background-color: var(--color-description-2,  #000028);
     min-block-size: 1024px;
   }
 
