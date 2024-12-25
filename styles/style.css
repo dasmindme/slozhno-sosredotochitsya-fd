@@ -296,7 +296,7 @@
 
 /* Медиазапрос для экранов планшета */
 
-@media (width > 768px) {
+@media (width >= 768px) {
   .page {
     inline-size: 768px;
   }
@@ -455,40 +455,30 @@
   }
 
   .image-sunset {
-    /*grid-column: span 2;
-    grid-row: 1;*/
     grid-area: sunset;
     inline-size: 479px;
     block-size: 192px;
   }
 
   .image-ice-cream {
-    /*grid-row: 1/2;
-    grid-column: 3;*/
     grid-area: ice-cream;
     block-size: 442px;
     inline-size: 229px;
   }
 
   .image-tape {
-    /*grid-column: 1;
-    grid-row: 2/3;*/
     grid-area: tape;
     inline-size: 229px;
     block-size: 568px;
   }
 
   .image-books {
-    /*grid-row: 2;
-    grid-column: 2;*/
     grid-area: books;
     inline-size: 230px;
     block-size: 230px;
   }
 
   .image-street {
-    /*grid-column: 2 / 3;
-    grid-row: 3;*/
     grid-area: street;
     inline-size: 479px;
     block-size: 318px;
@@ -503,7 +493,7 @@
   }
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .page {
     inline-size: 1024px;
   }
