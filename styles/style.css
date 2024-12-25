@@ -9,7 +9,6 @@
   font-family: var(--font-family, sans-serif);
   font-weight: var(--font-weight-s, 400);
   font-style: normal;
-  background-color: var(--color-description-2,  #000028);
   background-image: var(--bg-image, url(/images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
@@ -168,6 +167,7 @@
 
 .content {
   padding-block-start: 40px;
+  background-color: var(--color-description-2,  #000028);
   color: var(--color-description-1, #F1B2CE);
   font-size: var(--font-size, 18px);
   inline-size: 100%;
@@ -279,6 +279,7 @@
 /* Подвал повторяет шапку */
 
 .footer {
+  background-color: var(--color-description-2,  #000028);
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
