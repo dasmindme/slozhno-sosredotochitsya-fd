@@ -9,26 +9,21 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-color: #FFF1F7;
   --bg-image: url(/images/cover-image-light.png);
   --color-title-L: #FFC2E6;
   --color-description-1: #FFF1F7;
   --color-description-2: #353430;
   --accept-color: #FF8DCB;
-  --font-family: 'IBM Plex Mono';
-  --font-size: 18px;
-  --font-weight-s: 400;
-  --font-weight-m: 700;
-  --padding-inline-s: 10px;
-  --padding-block-s: 10px;
-  --margin-inline-s: 10px;
-  --margin-block-s: 10px;
-  --line-height: 23px;
 }
 
 .theme-light .page {
   color: var(--color-description-2, #353430);
-  /* Вам также нужно будет написать ряд подобных селекторов */
   background-image: var(--bg-image, url(/images/cover-image-light.png));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .theme-light .header__rec {
@@ -36,29 +31,29 @@
 }
 
 .theme-light .decorated-zone::before {
-  border-inline-start: var(--accept-color, #FF8DCB) 1px solid;
-  border-block-end: var(--accept-color, #FF8DCB) 1px solid;
+  border-inline-start: var(--color-description-2, #353430) 1px solid;
+  border-block-end: var(--color-description-2, #353430) 1px solid;
 }
 
 .theme-light .decorated-zone::after {
-  border-inline-end: var(--accept-color, #FF8DCB) 1px solid;
-  border-block-start: var(--accept-color, #FF8DCB) 1px solid;
+  border-inline-end: var(--color-description-2, #353430) 1px solid;
+  border-block-start: var(--color-description-2, #353430) 1px solid;
 }
 
 .theme-light .header__theme-menu-button {
-  color: var(--accent-color, #FF8DCB);
+  color: var(--color-description-2, #353430);
 }
 
 .theme-light .header__theme-menu-button:hover {
-  outline: var(--accept-color, #FF8DCB) 1px solid;
+  outline: var(--color-description-2, #353430) 1px solid;
 }
 
 .theme-light .header__theme-menu-button:focus-visible {
-  border-block-end: var(--accept-color, #FF8DCB) 1px solid;
+  border-block-end: var(--color-description-2, #353430) 1px solid;
 }
 
 .theme-light .header__theme-menu-button.header__theme-menu-button_active {
-  outline: var(--accept-color, #FF8DCB) 1px solid;
+  outline: var(--color-description-2, #353430) 1px solid;
 }
 
 .theme-light .header__title {
@@ -72,7 +67,7 @@
 
 .theme-light .content {
   color: var(--color-description-2, #353430);
-  background-color: var(--color-description-1, #FFF1F7);
+  background-color: var(--bg-color, #FFF1F7);
 }
 
 .theme-light .section__title {
@@ -107,7 +102,7 @@
 }
 
 .theme-light .footer {
-  background-color: var(--color-description-1, #FFF1F7);
+  background-color: var(--bg-color, #FFF1F7);
 }
 
 .theme-light .footer__title {
@@ -116,7 +111,8 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  .theme-light .page {
+    --bg-color: #FFF1F7;
     --bg-image: url(/images/cover-image-light.png);
     --color-title-L: #DB00FF;
     --color-description-1: #FFF1F7;
