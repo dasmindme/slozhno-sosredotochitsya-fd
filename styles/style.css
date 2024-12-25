@@ -9,6 +9,7 @@
   font-family: var(--font-family, sans-serif);
   font-weight: var(--font-weight-s, 400);
   font-style: normal;
+  background-color: var(--color-description-2,  #000028);
   background-image: var(--bg-image, url(/images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
@@ -170,7 +171,6 @@
   color: var(--color-description-1, #F1B2CE);
   font-size: var(--font-size, 18px);
   inline-size: 100%;
-  background-color: var(--color-description-2,  #000028);
 }
 
 /* Для всех секций задан один отступ */
@@ -269,6 +269,9 @@
 /* Размеры и отступ для картинки */
 
 .image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
   inline-size: 355px;
   padding-block-end: 5px;
 }
@@ -450,8 +453,6 @@
     width: 100%;
     height: 100%;
     padding-inline: 0;
-    object-fit: fill;
- 
   }
 
   .image-sunset {
@@ -485,7 +486,6 @@
   }
 
   .footer {
-    background-color: var(--color-description-2,  #000028);
     min-block-size: 1024px;
   }
 
@@ -666,7 +666,6 @@
 
   .image {
     padding-inline: 0;
-    object-fit: fill;
     inline-size: 100%;
     block-size: 100%;
  

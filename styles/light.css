@@ -31,6 +31,10 @@
   background-image: var(--bg-image, url(/images/cover-image-light.png));
 }
 
+.theme-light .header__rec {
+  display: none;
+}
+
 .theme-light .decorated-zone::before {
   border-inline-start: var(--accept-color, #FF8DCB) 1px solid;
   border-block-end: var(--accept-color, #FF8DCB) 1px solid;

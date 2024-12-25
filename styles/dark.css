@@ -27,6 +27,7 @@
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  background-color: var(--color-description-2,  #000028);
   background-image: var(--bg-image, url(/images/cover-image-dark.png));
 }
 
@@ -77,7 +78,6 @@
 
 .theme-dark .content {
   color: var(--color-description-1, #F1B2CE);
-  background-color: var(--color-description-2,  #000028);
 }
 
 .theme-dark .section__title {
@@ -109,10 +109,6 @@
 
 .theme-dark .link:focus-visible {
   outline: var(--color-light-pink, #F1B2CE) 1px solid;
-}
-
-.theme-dark .footer {
-  background-color: var(--color-description-2,  #000028);
 }
 
 .theme-dark .footer__title {
