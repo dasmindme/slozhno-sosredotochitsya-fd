@@ -26,6 +26,7 @@
 
 .theme-dark .header__rec {
   color: var(--accent-color, #FF0070);
+  display: block;
 }
 
 .theme-dark .header__rec::after {
