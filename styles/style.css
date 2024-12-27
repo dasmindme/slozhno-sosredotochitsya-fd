@@ -21,6 +21,7 @@
 .header {
   position: relative;
   display: grid;
+
   grid-template-columns: 1fr; 
   grid-template-rows: 1fr min-content 1fr;
   gap: 15px;
@@ -263,7 +264,7 @@
 
 .section-gallery {
   padding-block-start: 20px;
-  padding-block-end: 32px;
+  padding-block-end: 30px;
 }
 
 /* Размеры и отступ для картинки */
@@ -273,7 +274,7 @@
   height: 100%;
   object-fit: cover;
   inline-size: 355px;
-  padding-block-end: 5px;
+  padding-block-end: 10px;
 }
 
 /* Подвал повторяет шапку */
