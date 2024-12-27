@@ -176,10 +176,13 @@
   inline-size: 100%;
 }
 
+article {
+  inline-size: 355px;
+}
+
 /* Для всех секций задан один отступ */
 
 .section {
-  inline-size: 100%;
   margin-inline: var(--margin-inline-s, 10px);
 }
 
@@ -197,6 +200,11 @@
 
 .list {
   padding-block-end: 31px;
+  inline-size: 355px;
+}
+
+.list-item {
+  inline-size: 100%;
 }
 
 /* Стили и отступы для заголовка карточек */
@@ -267,6 +275,10 @@
 .section-gallery {
   padding-block-start: 20px;
   padding-block-end: 30px;
+}
+
+.gallery {
+  inline-size: 355px;
 }
 
 /* Размеры и отступ для картинки */
