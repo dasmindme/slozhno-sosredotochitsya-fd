@@ -176,14 +176,11 @@
   inline-size: 100%;
 }
 
-article {
-  inline-size: 355px;
-}
-
 /* Для всех секций задан один отступ */
 
 .section {
-  margin-inline: var(--margin-inline-s, 10px);
+  padding-inline: var(--margin-inline-s, 10px);
+  inline-size: 100%;
 }
 
 /* Стили заголовка секций */
@@ -200,11 +197,6 @@ article {
 
 .list {
   padding-block-end: 31px;
-  inline-size: 355px;
-}
-
-.list-item {
-  inline-size: 100%;
 }
 
 /* Стили и отступы для заголовка карточек */
@@ -371,7 +363,7 @@ article {
     display: grid;
     padding-block-end: 60px;
     inline-size: 100%;
-    margin-inline: 20px;
+    padding-inline: 20px;
   }
 
   .section-why {
