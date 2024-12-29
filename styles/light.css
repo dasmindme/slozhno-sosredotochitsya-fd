@@ -94,7 +94,7 @@
 }
 
 .theme-light .link:hover {
-  border-block-end: 1px solid var(--color-description-1, #F1B2CE);
+  border-block-end: 1px solid var(--color-description-2, #353430);
 }
 
 .theme-light .link:focus-visible {
