@@ -1,8 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-@import url("variables.css");
-
 .page {
   display: grid;
   grid-template-columns: 1fr;
@@ -16,6 +14,7 @@
   background-size: cover;
   background-attachment: fixed;
   inline-size: 375px;
+  overflow-x: hidden;
 }
 
 /* Шапка сделана через грид из 1 колонки и 3 строк */
@@ -23,7 +22,9 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr; 
+
+  grid-template-columns: 1fr;
+
   grid-template-rows: 1fr min-content 1fr;
   gap: 15px;
   min-block-size: 668px;
@@ -33,6 +34,7 @@
 /* Через абсолютное позиционирование добавила декаративный элемент */
 
 .header__rec {
+  display: block;
   position: absolute;
   top: 10px;
   left: 304px;
@@ -100,7 +102,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   list-style: none;
 }
 
@@ -177,8 +179,8 @@
 /* Для всех секций задан один отступ */
 
 .section {
+  padding-inline: var(--margin-inline-s, 10px);
   inline-size: 100%;
-  margin-inline: var(--margin-inline-s, 10px);
 }
 
 /* Стили заголовка секций */
@@ -264,7 +266,11 @@
 
 .section-gallery {
   padding-block-start: 20px;
-  padding-block-end: 32px;
+  padding-block-end: 30px;
+}
+
+.gallery {
+  inline-size: 355px;
 }
 
 /* Размеры и отступ для картинки */
@@ -274,7 +280,7 @@
   height: 100%;
   object-fit: cover;
   inline-size: 355px;
-  padding-block-end: 5px;
+  padding-block-end: 10px;
 }
 
 /* Подвал повторяет шапку */
@@ -357,7 +363,7 @@
     display: grid;
     padding-block-end: 60px;
     inline-size: 100%;
-    margin-inline: 20px;
+    padding-inline: 20px;
   }
 
   .section-why {
@@ -378,7 +384,7 @@
   }
 
   .section__title {
-    inline-size: 236px;
+    inline-size: 100%;
     display: block;
     padding-inline: 0;
     word-wrap: break-word;
@@ -395,7 +401,7 @@
 
   .list {
     padding-block-end: 0;
-    inline-size: 472px;
+    inline-size: 100%;
   }
 
   .list.list-what {
@@ -502,26 +508,13 @@
   }
 
   .header {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr min-content 1fr;
     gap: 0;
     min-block-size: 768px;
   }
 
   .header__rec {
-    top: 20px;
     left: 432px;
     grid-column: 2;
-  }
-
-  .decorated-zone::before {
-    bottom: 19px;
-    left: 20px;
-  }
-
-  .decorated-zone::after {
-    top: 20px;
-    right: 20px;
   }
 
   .header__theme-menu {
@@ -545,17 +538,7 @@
   }
 
   .header__description {
-    justify-items: start;
-    grid-column: 2;
-    grid-row: 3;
-    margin-inline: 0;
-    margin-inline-end: 18px;
-    margin-block-start: var( --margin-block-s, 10px);
     inline-size: 491px;
-  }
-
-  .content {
-    padding-block-start: 61px;
   }
 
   .section {
@@ -566,45 +549,29 @@
 
   .section-why {
     grid-template-columns: 315px 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
   }
 
   .section-what {
     grid-template-columns: 315px 1fr;
-    grid-template-rows: 1fr;
     gap: 0px;
   }
 
   .section-how {
     grid-template-columns: 315px 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
   }
 
   .section-gallery {
     padding-block-start: 20px;
     padding-block-end: 55px;
-    inline-size: 984px;
   }
 
   .gallery {
-    display: grid;
-    grid-template-areas:
-        "sunset sunset ice-cream"
-        "tape books ice-cream"
-        "tape street street";
-    gap: 20px;
     padding-block-start: 15px;
   }
 
   .section__title {
     display: block;
-    padding-inline: 0;
-    padding-block: 0;
     padding-block-end: 22px;
-    word-wrap: break-word;
-    inline-size: 100%;
   }
 
   .section__title.title-decor {
@@ -616,25 +583,11 @@
     background-color: var(--accent-color, #FF0070);
   }
 
-  .list {
-    padding-block-end: 0;
-    inline-size: 649px;
-  }
-
   .list.list-what {
     display: grid;
     grid-template-columns: repeat(3, 315px);
     gap: 20px;
-  }
-
-  .list.list-how {
-    display: grid;
-    inline-size: 649px;
-  }
-
-  .list-item {
-    justify-self: center;
-    align-self: start;
+    inline-size: 100%;
   }
 
   .article__description {
@@ -653,14 +606,7 @@
     padding-block: 0;
   }
 
-  .article__title {
-    grid-row: span 1;
-    margin-inline: 0;
-    block-size: 23px;
-  }
-
   .description__title.title-decor {
-    margin-inline: 0;
     margin-block-start: 22px;
     margin-block-end: 10px;
     inline-size: 100%;

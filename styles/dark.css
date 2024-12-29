@@ -14,17 +14,10 @@
   --color-title-L: #DB00FF;
   --color-description-1: #F1B2CE;
   --color-description-2: #000028;
-  --accept-color: #FF0070;
-  --font-family: 'IBM Plex Mono';
-  --font-size: 18px;
-  --font-weight-s: 400;
-  --font-weight-m: 700;
-  --padding-inline-s: 10px;
-  --padding-block-s: 10px;
-  --margin-inline-s: 10px;
-  --margin-block-s: 10px;
-  --line-height: 23px;
+  --accent-color: #FF0070;
 }
+
+
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
@@ -33,6 +26,7 @@
 
 .theme-dark .header__rec {
   color: var(--accent-color, #FF0070);
+  display: block;
 }
 
 .theme-dark .header__rec::after {
@@ -67,17 +61,17 @@
 }
 
 .theme-dark .header__title {
-  color: var( --color-title-L, #DB00FF);
+  color: var(--color-title-L, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
 .theme-dark .header__description {
-  color: var(--color-description-2,  #000028);
+  color: var(--color-description-2, #000028);
   background-color: var(--accent-color, #FF0070);
 }
 
 .theme-dark .content {
-  background-color: var(--bg-color,  #000028);
+  background-color: var(--bg-color, #000028);
   color: var(--color-description-1, #F1B2CE);
 }
 
@@ -113,10 +107,10 @@
 }
 
 .theme-dark .footer {
-  background-color: var(--bg-color,  #000028);
+  background-color: var(--bg-color, #000028);
 }
 
 .theme-dark .footer__title {
-  color: var( --color-title-L, #DB00FF);
+  color: var(--color-title-L, #DB00FF);
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
