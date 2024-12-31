@@ -12,105 +12,16 @@
   --bg-color: #000028;
   --bg-image: url(/images/cover-image-dark.png);
   --color-title-L: #DB00FF;
-  --color-description-1: #F1B2CE;
-  --color-description-2: #000028;
+  --color-title-m: #FF0070;
+  --color-description-content: #F1B2CE;
+  --color-description-header: #000028;
+  --color-link: #F1B2CE;
+  --color-button: #FF0070;
   --accent-color: #FF0070;
-}
-
-
-
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  background-image: var(--bg-image, url(/images/cover-image-dark.png));
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
 }
 
 .theme-dark .header__rec {
   color: var(--accent-color, #FF0070);
   display: block;
-}
-
-.theme-dark .header__rec::after {
-  box-shadow: 0px 0px 4px 2px var(--accept-color, #FF0070);
-  background: var(--accept-color, #FF0070);
-}
-
-.theme-dark .decorated-zone::before {
-  border-inline-start: var(--accept-color, #FF0070) 1px solid;
-  border-block-end: var(--accept-color, #FF0070) 1px solid;
-}
-
-.theme-dark .decorated-zone::after {
-  border-inline-end: var(--accept-color, #FF0070) 1px solid;
-  border-block-start: var(--accept-color, #FF0070) 1px solid;
-}
-
-.theme-dark .header__theme-menu-button {
-  color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .header__theme-menu-button:hover {
-  outline: var(--accent-color, #FF0070) 1px solid;
-}
-
-.theme-dark .header__theme-menu-button:focus-visible {
-  border-block-end: var(--accent-color, #FF0070) 1px solid;
-}
-
-.theme-dark .header__theme-menu-button.header__theme-menu-button_type_dark {
-  outline: var(--accent-color, #FF0070) 1px solid;
-}
-
-.theme-dark .header__title {
-  color: var(--color-title-L, #DB00FF);
-  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-}
-
-.theme-dark .header__description {
-  color: var(--color-description-2, #000028);
-  background-color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .content {
-  background-color: var(--bg-color, #000028);
-  color: var(--color-description-1, #F1B2CE);
-}
-
-.theme-dark .section__title {
-  color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .article__title {
-  color: var(--color-description-2, #000028);
-  background-color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .article__title.title-decor {
-  color: var(--color-description-2, #000028);
-  background-color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .description__title.title-decor {
-  color: var(--color-description-2, #000028);
-  background-color: var(--accent-color, #FF0070);
-}
-
-.theme-dark .link {
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
-}
-
-.theme-dark .link:hover {
-  border-block-end: 1px solid var(--color-description-1, #F1B2CE);
-}
-
-.theme-dark .link:focus-visible {
-  outline: var(--color-light-pink, #F1B2CE) 1px solid;
-}
-
-.theme-dark .footer {
-  background-color: var(--bg-color, #000028);
-}
-
-.theme-dark .footer__title {
-  color: var(--color-title-L, #DB00FF);
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }

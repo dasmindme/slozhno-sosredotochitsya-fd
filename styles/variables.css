@@ -9,7 +9,7 @@
   --font-weight-m: 700;
   --padding-inline-s: 10px;
   --padding-block-s: 10px;
-  --margin-inline-s: 10px;
+  --margin-inline-s: 1vi;
   --margin-block-s: 10px;
   --line-height: 23px;
 }
