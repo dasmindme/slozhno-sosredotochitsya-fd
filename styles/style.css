@@ -155,12 +155,15 @@
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
+.header__div {
+  align-self: flex-start;
+  justify-self: center;
+}
+
 /* Через свойства гридов задано положение описания */
 
 .header__description {
   grid-column: span 1;
-  align-self: center;
-  margin-inline: 3%;
   color: var(--color-description-header,  #000028);
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
@@ -549,8 +552,7 @@
   }
 
   .header__div {
-    align-self: center;
-    margin-block-end: 4%;
+    justify-self: start;
   }
 
   .header__description {
