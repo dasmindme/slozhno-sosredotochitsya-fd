@@ -7,9 +7,7 @@
   --font-size: 18px;
   --font-weight-s: 400;
   --font-weight-m: 700;
-  --padding-inline-s: 10px;
-  --padding-block-s: 10px;
+  --padding-inline-s: 1vi;
+  --padding-block-s: 1vi;
   --margin-inline-s: 1vi;
-  --margin-block-s: 10px;
-  --line-height: 23px;
 }

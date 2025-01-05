@@ -10,12 +10,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #000028;
-  --bg-image: url(/images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
   --color-title-L: #DB00FF;
   --color-title-m: #FF0070;
   --color-description-content: #F1B2CE;
   --color-description-header: #000028;
-  --color-link: #F1B2CE;
   --color-button: #FF0070;
   --accent-color: #FF0070;
   --accent-color-transparent: rgba(255, 0, 112, 0.4);

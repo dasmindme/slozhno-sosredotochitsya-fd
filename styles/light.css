@@ -10,7 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #FFF1F7;
-  --bg-image: url(/images/cover-image-light.png);
+  --bg-image: url(../images/cover-image-light.png);
   --color-title-L: #FFC2E6;
   --color-title-m: #353430;
   --color-button: #353430;
@@ -24,13 +24,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #FFF1F7;
-    --bg-image: url(/images/cover-image-light.png);
+    --bg-image: url(../images/cover-image-light.png);
     --color-title-L: #FFC2E6;
     --color-title-m: #353430;
     --color-button: #353430;
     --color-description-header: #353430;
     --color-description-content: #353430;
-    --color-link: #353430;
     --accent-color: #FF8DCB;
     --accent-color-transparent: rgba(50, 49, 45, 0.4);
   }

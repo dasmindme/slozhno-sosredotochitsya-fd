@@ -8,14 +8,13 @@
   font-family: var(--font-family, sans-serif);
   font-weight: var(--font-weight-s, 400);
   font-style: normal;
-  background-image: var(--bg-image, url(/images/cover-image-dark.png));
+  background-image: var(--bg-image, url(../images/cover-image-dark.png));
   background-color: var(--bg-color,  #000028);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  inline-size: 375px;
-  overflow-x: hidden;
+  min-inline-size: 375px;
 }
 
 /* Шапка сделана через грид из 1 колонки и 3 строк */
@@ -29,25 +28,24 @@
   grid-template-rows: 1fr min-content 1fr;
   min-block-size: 668px;
   inline-size: 100%;
-  block-size: 90vh;
+  block-size: 100vh;
   gap: 57px;
-  transition: transform 0.3s ease-in-out;
 }
 
-/* Через абсолютное позиционирование добавила декаративный элемент */
+/* Через абсолютное позиционирование добавила декоративный элемент */
 
 .header__rec {
   display: block;
   position: absolute;
   top: 10px;
-  left: 304px;
+  right: 40px;
   color: var(--accent-color, #FF0070);
   font-size: var(--font-size, 18px);
   line-height: 25px;
   text-transform: uppercase;
 }
 
-/* Через псевдоэлемент и абсолютное позиционирование добавила декаративный элемент точку */
+/* Через псевдоэлемент и абсолютное позиционирование добавила декоративный элемент точку */
 
 .header__rec::after {
   content: '';
@@ -94,7 +92,7 @@
   justify-self: end;
   align-self: center;
   padding-inline-end: var(--padding-inline-s, 1vi);
-  padding-block-start: 10vi;
+  padding-block-start: 16vi;
 }
 
 /* Для списка использован флекс контейнер */
@@ -132,13 +130,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: var(--color-button, #FF0070) 1px solid;
+  border-block-end: currentColor 1px solid;
   outline: none;
 }
 
-.header__theme-menu-button.header__theme-menu-button_active {
-  padding-block-end: 2px;
-  outline: var(--color-button, #FF0070) 1px solid;
+.header__theme-menu-button_active {
+  outline: currentColor 1px solid;
   pointer-events: none;
 }
 
@@ -163,12 +160,12 @@
 /* Через свойства гридов задано положение описания */
 
 .header__description {
-  grid-column: span 1;
   color: var(--color-description-header,  #000028);
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
   background-color: var(--accent-color, #FF0070);
-  inline-size: 355px;
+  min-inline-size: 355px;
+  margin-inline: 2vi;
 }
 
 /* Цвет и размер шрифта для контета на странице */
@@ -190,7 +187,7 @@
 /* Стили заголовка секций */
 
 .section__title {
-  inline-size: 355px;
+  min-inline-size: 355px;
   padding-block-end: 20px;
   color: var(--color-title-m, #FF0070);
   font-weight: var(--font-weight-m, 700);
@@ -205,24 +202,27 @@
 
 /* Стили и отступы для заголовка карточек */
 
-.article__title.title-decor {
+.article__title {
   inline-size: 100%;
   margin-block-end: 11px;
   color: var(--color-description-header, #000028);
   font-weight: var(--font-weight-m, 700);
   font-size: var(--font-size, 18px);
+}
+
+.article__title.title-decor {
   background-color: var(--accent-color, #FF0070);
 }
 
 /* Стили и отступы для заголовка карточек в секции how */
 
-.section-how .article__title.title-decor {
+.section-how .article__title {
   margin-block-end: 20px;
 }
 
 /* Стили и отступы для заголовка карточек в секции how */
 
-.list-how .article__title.title-decor {
+.list-how .article__title {
   color: var(--color-description-2, #000028);
   font-weight: var(--font-weight-s, 400);
   font-size: var(--font-size, 18px);
@@ -233,7 +233,7 @@
 /* Размеры и отступы для описания карточек */
 
 .article__description {
-  inline-size: 355px;
+  min-inline-size: 355px;
   padding-block-end: 20px;
   line-height: 130%;
 }
@@ -248,11 +248,11 @@
 /* Стили для ссылки в различных состояниях */
 
 .link:hover {
-  border-block-end: 1px solid var(--color-link, #F1B2CE);
+  border-block-end: 1px solid currentColor;
 }
 
 .link:focus-visible {
-  outline: var(--color-link, #F1B2CE) 1px solid;
+  outline: currentColor 1px solid;
 }
 
 /* Отсутпы для секции галерея */
@@ -262,7 +262,7 @@
 }
 
 .gallery {
-  inline-size: 355px;
+  min-inline-size: 355px;
 }
 
 /* Размеры и отступ для картинки */
@@ -271,8 +271,8 @@
   display: block;
   height: 100%;
   object-fit: cover;
-  inline-size: 355px;
-  padding-block-end: 10px;
+  inline-size: 100%;
+  margin-block-end: 10px;
 }
 
 /* Подвал повторяет шапку */
@@ -283,6 +283,7 @@
   display: grid;
   grid-template-columns: 1fr;
   min-block-size: 668px;
+  block-size: 100vh;
 }
 
 /* Заголовок в подвале повторяет свойства заголовка в шапке */
@@ -301,7 +302,7 @@
 
 @media (width >= 768px) {
   .page {
-    inline-size: 768px;
+    min-inline-size: 768px;
   }
 
   .header {
@@ -312,12 +313,13 @@
 
   .header__rec {
     top: 20px;
+    right: 49px;
     grid-column: 2;
   }
 
   .decorated-zone::before {
-    bottom: 19px;
-    left: 20px;;
+    bottom: 20px;
+    left: 20px;
   }
 
   .decorated-zone::after {
@@ -327,8 +329,8 @@
 
   .header__theme-menu {
     grid-column: 2;
-    padding-inline-end: 20px;
-    padding-block-end: 61px;
+    padding-inline-end: 5%;
+    padding-block-end: 12%;
   }
 
   .header__title {
@@ -360,8 +362,6 @@
   .section {
     display: grid;
     padding-block-end: 60px;
-    inline-size: 100%;
-    transition: transform 0.3s ease-in-out;
   }
 
   .section-why {
@@ -382,19 +382,9 @@
   }
 
   .section__title {
-    inline-size: 100%;
-    display: block;
+    min-inline-size: 236px;
     padding-inline: 0;
-    word-wrap: break-word;
     padding-block: 0;
-  }
-
-  .section__title.title-decor {
-    padding-block: 0;
-    color: var(--color-description-2, #000028);
-    font-weight: var(--font-weight-m, 700);
-    font-size: var(--font-size, 18px);
-    background-color: var(--accent-color, #FF0070);
   }
 
   .list {
@@ -403,30 +393,25 @@
   }
 
   .list.list-what {
-    inline-size: 728px;
+    min-inline-size: 728px;
     grid-column: span 2;
     grid-row: 2;
   }
 
   .list.list-how {
-    transition: transform 0.3s ease-in-out;
     grid-row: 1;
     grid-column: 2;
+    padding-block-start: 40px;
   }
 
-  .section-gallery {
-    inline-size: 100%;
-  }
 
   .gallery {
     display: grid;
-    grid-template-areas:
-        "sunset sunset ice-cream"
-        "tape books ice-cream"
-        "tape street street";
+    justify-self: center;
+    grid-template-columns: repeat(3, 230px);
+    grid-template-rows: 192px 230px 318px;
     gap: 20px;
-    padding-block-start: 12px;
-    transition: transform 0.3s ease-in-out;
+    padding-block-start: 7px;
   }
 
   .article__description {
@@ -437,72 +422,73 @@
     font-style: normal;
     line-height: var(--line-height, 23px);
     text-align: start;
-    inline-size: 100%;
+    min-inline-size: 315px;
   }
 
   .list-how .article__description {
     padding-block-start: 0;
-    padding-block-end: 23px;
   }
 
-  .article__title.title-decor {
+  .article__title {
     inline-size: 100%;
     margin-inline: 0;
-    block-size: 23px;
     grid-row: 1;
     grid-column: 2;
   }
 
-  .section-how .article__title.title-decor {
+  .section-how .article__title {
     margin-block-end: 0;
+    align-self: start;
   }
 
-  .list-how .article__title.title-decor {
+  .list-how .article__title {
     margin-block-start: 0;
-    margin-block-end: 10px;
+    margin-block-end: 11px;
   }
 
   .list-how li:first-child {
-    margin-block-start: 43px;
+    margin-block-start: 0;
   }
 
-  .section-gallery .article__title.title-decor {
+  .section-gallery .article__title {
     grid-column: 1;
   }
 
-  .image {
-    width: 100%;
-    height: 100%;
-    padding-inline: 0;
-  }
-
   .image-sunset {
-    grid-area: sunset;
-    inline-size: 479px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+    min-inline-size: 479px;
     block-size: 192px;
   }
 
   .image-ice-cream {
-    grid-area: ice-cream;
+    grid-column: 3;
+    grid-row: 1 / 2;
     block-size: 442px;
-    inline-size: 229px;
+    min-inline-size: 229px;
   }
 
   .image-tape {
-    grid-area: tape;
-    inline-size: 229px;
+    grid-column: 1;
+    grid-row: 2 / 3;
+    min-inline-size: 229px;
     block-size: 568px;
   }
 
   .image-books {
-    grid-area: books;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: auto;
     inline-size: 230px;
     block-size: 230px;
   }
 
   .image-street {
-    grid-area: street;
-    inline-size: 479px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 3;
+    min-inline-size: 479px;
     block-size: 318px;
   }
 
@@ -517,16 +503,14 @@
 
 @media (width >= 1024px) {
   .page {
-    inline-size: 1024px;
+    min-inline-size: 1024px;
   }
 
   .header {
-    gap: 0;
     min-block-size: 768px;
   }
 
   .header__rec {
-    left: 432px;
     grid-column: 2;
   }
 
@@ -544,11 +528,7 @@
   }
 
   .header__title {
-    grid-column: span 2;
-    justify-self: flex-start;
-    align-self: center;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-inline: 0;
   }
 
   .header__div {
@@ -556,11 +536,7 @@
   }
 
   .header__description {
-    inline-size: 491px;
-  }
-
-  .content {
-    padding-inline: 1.2rem
+    min-inline-size: 491px;
   }
 
   .section {
@@ -587,76 +563,52 @@
   }
 
   .gallery {
-    padding-block-start: 15px;
+    grid-template-columns: repeat(3, 315px);
+    grid-template-rows: 260px 315px 433px;
   }
 
   .section__title {
-    display: block;
     padding-block-end: 22px;
-  }
-
-  .section__title.title-decor {
-    margin-block-start: 6px;
-    padding-block: 0;
-    color: var(--color-description-2, #000028);
-    font-weight: var(--font-weight-m, 700);
-    font-size: var(--font-size, 18px);
-    background-color: var(--accent-color, #FF0070);
   }
 
   .list.list-what {
     display: grid;
-    grid-template-columns: repeat(3, 315px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     inline-size: 100%;
-  }
-
-  .list.list-how {
-    gap: 10px;
   }
 
   .article__description {
     padding-block-end: 22px;
   }
 
-  .image {
-    padding-inline: 0;
-    inline-size: 100%;
-    block-size: 100%;
- 
-  }
-
   .image-sunset {
-    grid-area: sunset;
     inline-size: 650px;
     block-size: 260px;
   }
 
   .image-ice-cream {
-    grid-area: ice-cream;
     block-size: 595px;
     inline-size: 314px;
   }
 
   .image-tape {
-    grid-area: tape;
     inline-size: 315px;
     block-size: 768px;
   }
 
   .image-books {
-    grid-area: books;
     inline-size: 315px;
     block-size: 315px;
   }
 
   .image-street {
-    grid-area: street;
     inline-size: 649px;
     block-size: 433px;
   }
 
   .footer {
+    margin-block-start: 1vi;
     min-block-size: 768px;
   }
 
